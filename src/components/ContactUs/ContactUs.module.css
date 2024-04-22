@@ -1,0 +1,99 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  width: 80%;
+}
+.contactHead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contactHead h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.contactHead p{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    padding: 0 3%;
+}
+.contactBody{
+      display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding: 5%;
+}
+.contactSocials{
+    width: 40%;
+    padding: 4%;
+    display: flex;
+      flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 3px solid theme('colors.primary.light');
+
+}
+.contactSocials h2{
+    font-size: 45px;
+    text-align:center;
+    margin-top: -40%;
+    color: #3f3f3fc0;
+}
+.socialIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+     gap: 37px;
+}
+.icon{
+    width: 47px;
+    height: 47px;
+}
+.icon:hover{
+    scale:  130% ;
+    transition: all .4s ease-in-out;
+}
+
+.contactForm{
+    width: 60%;
+    padding: 4%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 768px){
+ .contactBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ .contactSocials{
+    width: 100%;
+  border-bottom: 2px solid theme('colors.primary.light');
+  border-right: 0px;
+  padding: 30px 2%;
+}
+
+ .contactSocials img{
+    width: 300px;
+}
+ .contactSocials h2{
+    font-size: 39px;
+    margin-top: -70%;
+    width: 100%;
+}
+
+.contactForm{
+    width: 100%;
+}
+}
