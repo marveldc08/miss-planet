@@ -1,0 +1,73 @@
+/* components/Footer.module.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.column {
+  width: calc(25% - 20px);
+  text-align: center;
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+   align-items: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.5rem;
+}
+
+.linkList a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.linkList a:hover {
+  text-decoration: underline;
+}
+
+.socialIcons {
+  display: flex;
+}
+
+.socialIcons a {
+  margin-right: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.socialIcons a:last-child {
+  margin-right: 0;
+}
+
+
+@media screen and (max-width: 768px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+    .column {
+     width: 100%;
+     }
+}

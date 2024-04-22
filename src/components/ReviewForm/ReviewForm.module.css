@@ -1,0 +1,78 @@
+/* components/ReviewForm.module.css */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.textarea {
+  height: 150px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: theme('colors.primary.light');
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: theme('colors.secondary.DEFAULT');
+}
+
+
+/* components/ReviewList.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.review {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.comment {
+  margin-bottom: 0;
+}
