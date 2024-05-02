@@ -1,0 +1,105 @@
+/* GalleryPage.module.css */
+
+.jumbotron {
+    background-image: url('/img/galleryJumbo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    z-index: -1;
+}
+.content {
+    max-width: 800px;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.galleyHead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 100vh; */
+    /* border: 1px solid red; */
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 5px;
+  padding: 4%;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  background-color: #eee;
+  height: 200px; /* Set a default height for the images */
+  border-radius: 8px;
+   /* border: 1px solid red; */
+}
+
+/* Adjust the height for different grid items */
+.image:nth-child(2n) {
+  height: 300px;
+
+}
+
+.image:nth-child(3n) {
+  height: 250px;
+}
+
+
+@media screen and (max-width: 768px){
+    .gallery{
+        gap: 8px;
+        padding: 5%;
+    }
+    .image {
+        width: 100%;
+        /* height: 25em; */
+    }
+     .image:first-child {
+          height: 25em;
+    }
+    .image:nth-child( 5n ) {
+         height: 25em;
+    }
+    .image:nth-child( 7n ) {
+         height: 25em;
+    }
+    .image:nth-child( 11n ) {
+         height: 25em;
+    }
+    .image:nth-child( 13n ) {
+      height: 25em;
+    }
+    .image:nth-child( 17n ) {
+      height: 25em;
+    }
+    .image:nth-child( 3n ) {
+      height: 25em;
+    }
+    .image:nth-child( 4n ) {
+      height: 25em;
+    }
+    .image:nth-child( 6n ) {
+      height: 25em;
+    }
+
+   }

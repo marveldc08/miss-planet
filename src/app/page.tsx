@@ -28,7 +28,7 @@ const Home = () => {
       ];
   return (
     <div className={styles.container}>
-      <Header />
+     
       <section className={styles.jumbotron}>
         <div className={styles.content}>
           <h1 className={styles.title}>Miss Planet Collectables</h1>
@@ -99,7 +99,7 @@ const Home = () => {
             <div className={styles.offerCard}>
               <div className={`${styles.cardImageContainer} ${"w-[40%]"}`}>
                 <Image
-                  src="/img/assesry.jpeg"
+                  src="/img/accessory.jpeg"
                   width={500}
                   height={400}
                   alt="Accessories"
@@ -159,18 +159,12 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className={styles.testimonialSection}>
-          <div className={styles.testimonialHead}>
-            <h2>Testimonials</h2>
-            <h4>See what our happy Clients have to say</h4>
-          </div>
           <Testimonial testimonials={testimonials} />
-        </section>
-        <section className={styles.contactSection}>
+
           <ContactUs />
-        </section>
+   
       </section>
-      <Footer />
+      
     </div>
   );
 }

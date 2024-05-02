@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css"; // Import CSS module for styling
 import { BsList } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
    const [isScrolled, setIsScrolled] = useState(false);
+   const [activeLink, setActiveLink] = useState('')
 
    // Add a scroll event listener to the window
    useEffect(() => {
@@ -27,6 +29,13 @@ const Header = () => {
        window.removeEventListener("scroll", handleScroll);
      };
    }, []);
+
+   const pathName = usePathname();
+
+
+   useEffect(() => {
+    setActiveLink(pathName)
+   }, [pathName])
 
 
   return (
@@ -51,30 +60,44 @@ const Header = () => {
         <nav className={styles.nav}>
           <Link
             href="/"
-            className={`${isScrolled ? styles.navLinkDark : styles.navLink} `}
+            className={`${
+              isScrolled ? styles.navLinkDark : styles.navLink
+            }           
+            ${activeLink === "/" ? styles.active : ""} `}
           >
             Home
           </Link>
           <Link
-            href="/products"
-            className={`${isScrolled ? styles.navLinkDark : styles.navLink} `}
+            href="/catalogue" id="productServicesId"
+            className={`${isScrolled ? styles.navLinkDark : styles.navLink} ${
+              activeLink === "/catalog" ? styles.active : ""
+            } `}
           >
-            Products
+            Catalogue
           </Link>
           <Link
             href="/gallery"
-            className={`${isScrolled ? styles.navLinkDark : styles.navLink} `}
+            className={`${isScrolled ? styles.navLinkDark : styles.navLink} ${
+              activeLink === "/gallery" ? styles.active : ""
+            }  `}
           >
             Gallery
           </Link>
 
           <Link
             href="/about"
-            className={`${isScrolled ? styles.navLinkDark : styles.navLink} `}
+            className={`${isScrolled ? styles.navLinkDark : styles.navLink} ${
+              activeLink === "/about" ? styles.active : ""
+            } `}
           >
             About Us
           </Link>
-          <Link href="/contact" className={styles.contactUsButton}>
+          <Link
+            href="/contact"
+            className={` ${styles.contactUsButton} ${
+              activeLink === "/contact" ? styles.activeContact : ""
+            }`}
+          >
             Contact Us
           </Link>
         </nav>
@@ -92,11 +115,12 @@ const Header = () => {
       {/* Mobile Menu */}
       {isDropdownOpen && (
         <div className={styles.mobileMenu}>
-          <Link href="/" className={styles.mobileLink}>
+          <Link href="/" className={styles.mobileLink} onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
             Home
           </Link>
-          <Link href="/products" className={styles.mobileLink}>
-            Products
+          <Link href="/catalogue" className={styles.mobileLink}>
+            Catalogue
           </Link>
           <Link href="/gallery" className={styles.mobileLink}>
             Gallery
