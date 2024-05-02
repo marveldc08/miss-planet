@@ -2,7 +2,7 @@
 .header {
     /* background-color: rgb(247, 247, 247); */
     background: transparent;
-    color: rgb(247, 247, 247);
+    color: white;
     padding: 0px 20px;
     position: fixed;
     top: 0;
@@ -11,7 +11,7 @@
     z-index: 1;
 }
 .scrolledHeader {
-    background-color: rgb(247, 247, 247); 
+    background-color: white; 
 }
 
 .container {
@@ -78,8 +78,11 @@
 .contactUsButton:hover{
     background-color: theme('colors.secondary.DEFAULT');
 }
+.activeContact{
+    background-color: theme('colors.secondary.DEFAULT');
+}
 
-.navLinkDark:hover::after,.navLink:hover::after {
+.navLinkDark:hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -87,6 +90,25 @@
     bottom: -2px;
     height: 2px;
     background-color: #9d6fe2; 
+}
+.navLink:hover::after{
+        content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: #ffffff; 
+
+}
+.productServicesId{
+    width: 80% !important;
+    padding: 2%;
+    border: 1px solid red;
+}
+
+.active{
+     border-bottom: 3px solid theme('colors.primary.light');
 }
 
 .dropdown {

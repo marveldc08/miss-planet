@@ -1,23 +1,66 @@
 /* components/TestimonialCarousel.module.css */
 
-.slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 48%;
-  height: 400px;
-  padding: 0 2%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.26);
-  color: white;
-  border-radius: 15px;
+.testimonialSection{
+    background-color: white;
+    width: 100%;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.testimonialHead{
+    display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+.testimonialHead h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.testimonialHead h4{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    padding: 0 3%;
+    color: #56616B;
 }
 
-.slide {
+
+.carouselContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 5%;
+  overflow-x: auto;
+  transition: transform 0.5s ease;
 }
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+  background-color: #EFF1F6;
+  padding: 20px;
+  /* min-width: 300px; */
+  width: 100%;
+}
+
+
+
+
+.carouselContainer::-webkit-scrollbar {
+  display: none; 
+}
+
+
 
 .content {
   text-align: center;
@@ -44,19 +87,49 @@
 }
 
 .quote {
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 10px;
+  font-weight: 400;
+  color: #56616B; 
+  line-height: 1.8rem;
+  text-align: center;
+
 }
 
 .author {
   font-style: italic;
+  font-weight: 400;
+  color: #56616B; 
+ margin-top: 2%;
+ font-size: 17px;
 }
 
 
 @media screen  and (max-width: 768px) {
+  .testimonialHead h2,.testimonialHead h4 {
+    margin: 5px 0;
+}
+
+.carouselContainer {
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar (IE and Edge) */
+    width:100%;
+  }
+  
+  .testimonialCard {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: calc(100% / 1);
+    overflow: hidden;
+    padding: 20px 30px;
+  }
   .slider {
   width: 80%;
   height: 300px;
 
 }
+
 }

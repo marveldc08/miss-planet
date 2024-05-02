@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 2%;
     gap: 29px;
     width: 90%;
@@ -111,10 +111,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     width: 40%;
     height: 100%;
     padding: 2%;
+    line-height: 1.8;
 }
 .cardText h2{
     padding: 0 3%;
@@ -150,8 +151,8 @@
     justify-content: center;
     text-align: center;
     color: white;
+    top:-100px; ;
     position:sticky;
-    top:-100px; 
     left: 0;
     right: 0;
     z-index: -1;
@@ -172,34 +173,8 @@
     border-right: 3px solid theme('colors.primary.light');
 }
 
-.testimonialSection, .contactSection{
-    background-color: white;
-    width: 100%;
-    padding: 2% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-.testimonialHead{
-    display: flex;
-     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    text-align: center;
-}
-.testimonialHead h2{
-    font-size: 2rem;
-    font-weight: 500;
-}
-.testimonialHead h4{
-    font-weight: 400;
-    font-style: italic;
-    font-size: 18px;
-    padding: 0 3%;
-}
+
+
 .z{
     z-index: unset;
     border: 1px solid red !important
@@ -253,8 +228,6 @@
     border-bottom: 3px solid theme('colors.primary.light');
     border-right: 0px ;
 }
-.testimonialHead h2,.testimonialHead h4 {
-    margin: 5px 0;
-}
+
 
 }
