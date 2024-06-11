@@ -18,7 +18,6 @@ const page = () => {
         <img src="/img/gallery/galleryImg12.jpeg" className={styles.image} alt="Avatar" />
         <video src='/img/gallery/galleryVid4.mp4'  width="320" height="240" autoPlay loop muted className={`${styles.image} ${styles.video}`}></video>
          <img src="/img/gallery/galleryImg7.jpeg" className={styles.image} alt="Avatar" />
-         <img src="/img/gallery/galleryImg1.jpeg" className={styles.image} alt="Avatar" />
          <img src="/img/gallery/galleryImg9.jpeg" className={styles.image} alt="Avatar" />
          <img src="/img/gallery/galleryImg13.jpeg" className={styles.image} alt="Avatar" />
          <img src="/img/gallery/galleryImg3.jpeg" className={styles.image} alt="Avatar" />

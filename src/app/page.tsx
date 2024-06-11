@@ -28,7 +28,6 @@ const Home = () => {
       ];
   return (
     <div className={styles.container}>
-     
       <section className={styles.jumbotron}>
         <div className={styles.content}>
           <h1 className={styles.title}>Miss Planet Collectables</h1>
@@ -99,7 +98,7 @@ const Home = () => {
             <div className={styles.offerCard}>
               <div className={`${styles.cardImageContainer} ${"w-[40%]"}`}>
                 <Image
-                  src="/img/accessory.jpeg"
+                  src="/img/accessories.jpeg"
                   width={500}
                   height={400}
                   alt="Accessories"
@@ -125,7 +124,7 @@ const Home = () => {
               }`}
             >
               <div className={styles.cardText}>
-                <h2 className={"text-center"}>Wigs</h2>
+                <h2 className={"text-center"}>Hair</h2>
                 <p className="text-accent-dark text-center">
                   Miss Planet brings out the Queen in You with our Bridal
                   collections Lorem ipsum dolor sit amet consectetur adipisicing
@@ -159,12 +158,10 @@ const Home = () => {
             </div>
           </div>
         </section>
-          <Testimonial testimonials={testimonials} />
+        <Testimonial testimonials={testimonials} />
 
-          <ContactUs />
-   
+        <ContactUs />
       </section>
-      
     </div>
   );
 }
