@@ -57,14 +57,16 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Bridals</h2>
                 <p className="text-accent-dark text-center ">
-                  Miss Planet brings out the Queen in You with our Bridal
-                  collections Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Dolor optio fugit soluta tenetur perspiciatis laborum
-                  cupiditate voluptatum consequatur sunt mollitia, tempore fuga
-                  modi eligendi hic eaque eveniet ullam, quae sed?
+                  Your wedding day is a celebration of love, culture, and
+                  heritage. Let us help you honor your roots and create
+                  unforgettable memories with our stunning Nigerian traditional
+                  bridal attire. View our catalogue to find the perfect ensemble
+                  that resonates with your personal style and cultural
+                  background. Step into your new life wrapped in grace and
+                  elegance.
                 </p>
-                <Link href="/products" className={styles.learnMoreBtn}>
-                  Learn More &rarr;
+                <Link href="/catalogue" className={styles.learnMoreBtn}>
+                  View Categories &rarr;
                 </Link>
               </div>
             </div>
@@ -76,14 +78,16 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Fabrics</h2>
                 <p className="text-accent-dark text-center">
-                  Miss Planet brings out the Queen in You with our Bridal
-                  collections Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Dolor optio fugit soluta tenetur perspiciatis laborum
-                  cupiditate voluptatum consequatur sunt mollitia, tempore fuga
-                  modi eligendi hic eaque eveniet ullam, quae sed?
+                  Step into a world of color, texture, and tradition with our
+                  stunning collection of Nigerian fabrics. Perfect for weddings,
+                  special events, and everyday elegance, our fabrics are
+                  designed to bring out and celebrate the beauty and royalty in
+                  You. Whether you’re looking for luxurious aso oke, vibrant
+                  Ankara, or intricate lace, Miss Planet has the perfect fabric
+                  to elevate your style.
                 </p>
-                <Link href="/products" className={styles.learnMoreBtn}>
-                  Learn More &rarr;
+                <Link href="/catalogue" className={styles.learnMoreBtn}>
+                  View Categories &rarr;
                 </Link>
               </div>
               <div className={styles.cardImageContainer}>
@@ -107,14 +111,15 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Accessories</h2>
                 <p className="text-accent-dark text-center ">
-                  Miss Planet brings out the Queen in You with our Bridal
-                  collections Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Dolor optio fugit soluta tenetur perspiciatis laborum
-                  cupiditate voluptatum consequatur sunt mollitia, tempore fuga
-                  modi eligendi hic eaque eveniet ullam, quae sed?
+                  Miss Planet offers only the best and quality accessories
+                  ranging from intricate bead necklaces to elegant wrist beads
+                  and statement earrings. Our accessories are designed to
+                  complement your style and celebrate your heritage. Perfect for
+                  weddings, special events, and everyday elegance, our
+                  accessories add the perfect finishing touch to any outfit.
                 </p>
-                <Link href="/products" className={styles.learnMoreBtn}>
-                  Learn More &rarr;
+                <Link href="/catalogue" className={styles.learnMoreBtn}>
+                  View Categories &rarr;
                 </Link>
               </div>
             </div>
@@ -126,14 +131,14 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Hair</h2>
                 <p className="text-accent-dark text-center">
-                  Miss Planet brings out the Queen in You with our Bridal
-                  collections Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Dolor optio fugit soluta tenetur perspiciatis laborum
-                  cupiditate voluptatum consequatur sunt mollitia, tempore fuga
-                  modi eligendi hic eaque eveniet ullam, quae sed?
+                  At Miss Planet, our premium collection of wigs and hair-do
+                  offers unparalleled versatility and convenience, allowing you
+                  to switch up your look with ease. Whether you desire a
+                  completely different style or simply want to add volume and
+                  length, we have the perfect solution for You.
                 </p>
-                <Link href="/products" className={styles.learnMoreBtn}>
-                  Learn More &rarr;
+                <Link href="/catalogue" className={styles.learnMoreBtn}>
+                  View Categories &rarr;
                 </Link>
               </div>
               <div className={styles.cardImageContainer}>
@@ -149,12 +154,44 @@ const Home = () => {
             </div>
             <div className="p-2">
               <h2 className={styles.subtitle}>WE ARE THE BEST</h2>
+              <h4>Unparalleled Quality</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis nam officia illo accusamus fugit eum dignissimos
-                similique voluptas natus quia. Sequi sunt hic iste nisi officiis
-                consectetur neque tenetur ipsum.
+                At our store, we pride ourselves on offering only the finest
+                quality products. Each piece, from our luxurious fabrics to our
+                exquisite accessories, is meticulously crafted to ensure it
+                meets our high standards of excellence. We source the best
+                materials and work with skilled artisans to deliver products
+                that are durable, beautiful, and timeless.
               </p>
+              <h4>Unique and Custom Designs</h4>
+              <p>
+                Our range of fabrics, accessories, and bridal attire features
+                unique designs that you won't find anywhere else. Whether you're
+                looking for a traditional piece or something with a modern
+                twist, our products are designed to stand out. We also offer
+                custom design services to help you create the perfect outfit or
+                accessory that truly reflects your individual style and vision.
+              </p>
+                   
+              {/* <h4>Cultural Significance</h4>
+              <p>
+                Our products are not just fashion statements; they are imbued
+                with cultural significance and meaning. Each item in our
+                collection reflects the rich cultural heritage of Nigeria and
+                tells a story of tradition, identity, and pride. By choosing our
+                products, you are embracing and celebrating this heritage in
+                your everyday life.
+              </p> */}
+              <h4>Customer Satisfaction</h4>
+              <p>
+                Your satisfaction is our top priority. We are dedicated to
+                providing high-quality products and exceptional service to
+                ensure you have the best shopping experience. We value your
+                feedback and are always striving to improve and meet your
+                expectations. When you choose us, you can shop with confidence,
+                knowing that you are getting the best in quality and service.
+              </p>
+              <h3>Choose Us for Quality, Tradition, and Unmatched Style!</h3>
             </div>
           </div>
         </section>
