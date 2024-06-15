@@ -82,9 +82,9 @@ const Home = () => {
                   stunning collection of Nigerian fabrics. Perfect for weddings,
                   special events, and everyday elegance, our fabrics are
                   designed to bring out and celebrate the beauty and royalty in
-                  You. Whether you’re looking for luxurious aso oke, vibrant
-                  Ankara, or intricate lace, Miss Planet has the perfect fabric
-                  to elevate your style.
+                  You. Whether you&apos;re looking for luxurious Aso oke,
+                  vibrant Ankara, or intricate lace, Miss Planet has the perfect
+                  fabric to elevate your style.
                 </p>
                 <Link href="/catalogue" className={styles.learnMoreBtn}>
                   View Categories &rarr;
@@ -172,7 +172,7 @@ const Home = () => {
                 custom design services to help you create the perfect outfit or
                 accessory that truly reflects your individual style and vision.
               </p>
-                   
+
               {/* <h4>Cultural Significance</h4>
               <p>
                 Our products are not just fashion statements; they are imbued
