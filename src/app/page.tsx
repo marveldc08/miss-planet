@@ -153,7 +153,7 @@ const Home = () => {
               <h1 className={styles.title}>Why Choose Us?</h1>
             </div>
             <div className="p-2">
-              <h2 className={styles.subtitle}>WE ARE THE BEST</h2>
+              <h2 className={styles.subtitle}>WE ARE THE BEST IN </h2>
               <h4>Unparalleled Quality</h4>
               <p>
                 At our store, we pride ourselves on offering only the finest
