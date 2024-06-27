@@ -26,7 +26,7 @@ const TestimonialCarousel = ({ testimonials }) => {
       </div>
       <div className={styles.carouselContainer }>
         <div className={styles.testimonialCard}>
-          <img src="/img/blob.png" className={styles.avatar} alt="Avatar" />
+          <Image src="/img/blob.png" width='200' height='200' className={styles.avatar} alt="Avatar" />
           <div>
             <p
               className={`${styles.quote}`}
@@ -60,7 +60,7 @@ const TestimonialCarousel = ({ testimonials }) => {
           </div>
         </div>
         <div className={styles.testimonialCard}>
-          <img src="/img/blob.png" className={styles.avatar} alt="Avatar" />
+          <Image src="/img/blob.png" width='200' height='200' className={styles.avatar} alt="Avatar" />
           <div>
             <p
               className={styles.quote}

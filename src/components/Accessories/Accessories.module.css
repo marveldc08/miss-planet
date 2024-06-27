@@ -1,7 +1,7 @@
 .accessoriesContainer{
   width: auto;
   margin: 0 3%;
-  padding: 20px;
+  padding: 0px;
   text-align: center;
 }
 .heading {
@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: 1px solid red;
 }
 .accessories{
   display: grid;
@@ -27,6 +26,7 @@
 }
 .accessory{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
@@ -36,6 +36,10 @@
 }
 .accessory div> h2{
    font-size: 15px;
+}
+.accessory img{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .detail{
     padding-bottom: 10%;
@@ -69,9 +73,8 @@ padding: 0;
   }
   .accessories{
     display: grid;
-    grid-template-columns: repeat( 2, minmax(250px, 1fr) );
+    grid-template-columns: repeat( 1, minmax(250px, 1fr) );
    width: 100%; 
-   border: 1px solid red;
   }
 
   .accessory{
@@ -80,7 +83,7 @@ padding: 0;
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    border: 1px solid red;
+    width: 100%;
 }
 }
 

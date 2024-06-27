@@ -144,6 +144,7 @@ width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 90%;
 }
 .staticContentWrap div{
     width: 100%;
@@ -151,6 +152,7 @@ width: 100%;
 .staticContentWrap div:first-of-type{
     border-bottom: 3px solid theme('colors.primary.light');
     border-right: 0px ;
+    width: 90%;
 }
 
 

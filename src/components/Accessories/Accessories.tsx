@@ -25,23 +25,27 @@ const Accessories = () => {
       <h1 className={styles.heading}>Accessories</h1>
       <p>we offer only the best Accessories</p>
       <div className={styles.container}>
-          <div className={styles.accessories}>
-            {accessories.map((accessory) => ( 
-              <div key={accessory.id} className={styles.accessory}>
+        <div className={styles.accessories}>
+          {accessories.map((accessory) => (
+            <div key={accessory.id} className={styles.accessory}>
               <div>
-                  < Image src={accessory.img} width={200} height={200} alt='product image' /> 
-                </div>   
-                <div className={styles.detail}>
-                  <h2>{accessory.name}</h2>
-                  <h4>{accessory.price}</h4>
-                  <Link href="/checkout" className={styles.orderBtn}>
-                   Order Now 
-                   </Link>
-                </div>          
+                <Image
+                  src={accessory.img}
+                  width={200}
+                  height={200}
+                  alt="product image"
+                />
               </div>
-            ))
-            }
-          </div>
+              <div className={styles.detail}>
+                <h2>{accessory.name}</h2>
+                <h4>₦ {accessory.price}</h4>
+                <Link href="/checkout" className={styles.orderBtn}>
+                  Order Now
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

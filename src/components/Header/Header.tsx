@@ -44,7 +44,7 @@ const Header = () => {
     >
       <div className={styles.container}>
         {/* Logo */}
-        <div className={styles.logo}>
+        <div className={`${styles.logo} ${!isScrolled && styles.logoBg}`}>
           <Link href="/">
             <Image
               src="/img/mp-logo.png"
@@ -68,7 +68,8 @@ const Header = () => {
             Home
           </Link>
           <Link
-            href="/catalogue" id="productServicesId"
+            href="/catalogue"
+            id="productServicesId"
             className={`${isScrolled ? styles.navLinkDark : styles.navLink} ${
               activeLink === "/catalog" ? styles.active : ""
             } `}
@@ -115,7 +116,10 @@ const Header = () => {
       {/* Mobile Menu */}
       {isDropdownOpen && (
         <div className={styles.mobileMenu}>
-          <Link href="/" className={styles.mobileLink} onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          <Link
+            href="/"
+            className={styles.mobileLink}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             Home
           </Link>

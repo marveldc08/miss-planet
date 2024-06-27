@@ -71,7 +71,7 @@ const Page = () => {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <h2>Wigs</h2>
+              <h2>Hair</h2>
             </div>
           </div>
         </div>

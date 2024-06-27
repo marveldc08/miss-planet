@@ -116,7 +116,7 @@
     -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar (IE and Edge) */
-    width:100%;
+    width:80%;
   }
   
   .testimonialCard {
@@ -126,10 +126,6 @@
     overflow: hidden;
     padding: 20px 30px;
   }
-  .slider {
-  width: 80%;
-  height: 300px;
 
-}
 
 }
