@@ -165,12 +165,7 @@ const Home = () => {
               </p>
               <h4>Unique and Custom Designs</h4>
               <p>
-                Our range of fabrics, accessories, and bridal attire features
-                unique designs that you won't find anywhere else. Whether you're
-                looking for a traditional piece or something with a modern
-                twist, our products are designed to stand out. We also offer
-                custom design services to help you create the perfect outfit or
-                accessory that truly reflects your individual style and vision.
+                {"Our range of fabrics, accessories, and bridal attire features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."}
               </p>
 
               {/* <h4>Cultural Significance</h4>
