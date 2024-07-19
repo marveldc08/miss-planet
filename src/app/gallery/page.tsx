@@ -37,6 +37,18 @@ const page = () => {
           <Image src="/img/gallery/galleryImg8.jpeg"  width='200' height='200' className={styles.image} alt="Avatar" />
 
            <video src='/img/gallery/galleryVid2.mp4'  width="320" height="240" autoPlay loop muted className={`${styles.image} ${styles.video}`}></video>
+            <Image src="/img/gallery/galleryImg14.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg15.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg16.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg17.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg18.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg19.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg20.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg21.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg22.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg23.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+            <Image src="/img/gallery/galleryImg24.jpg"  width='200' height='200' className={styles.image} alt="Avatar" />
+
       </div>
     </div>
     </div>

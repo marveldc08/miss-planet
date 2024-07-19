@@ -3,31 +3,33 @@ import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './Accessories.module.css'
+import styles from '../../app/catalogue/catalogue.module.css'
 
 const Accessories = () => {
 
   const [isActive, setIsActive] = useState('')
   const accessories = [
-    { name: "Bead Necklace", img: "/img/accessories.jpeg", price: 5000, id: 1 },
-    { name: "Bead Necklace", img: "/img/accessories.jpeg", price: 8000, id: 2 },
-    { name: "Bead Ear-rings",img: "/img/accessories.jpeg", price: 7090, id: 3 },
-    { name: "Bead Necklace",img: "/img/accessories.jpeg", price: 5000, id: 4 },
-    { name: "Wrist Bead",img: "/img/accessories.jpeg", price: 1700, id: 5 },
-    { name: "Bead Necklace",img: "/img/accessories.jpeg", price: 5000, id: 6 },
-    { name: "Wrist Bead",img: "/img/accessories.jpeg", price: 3400, id: 7 },
-    { name: "Bead Necklace",img: "/img/accessories.jpeg", price: 6800, id: 8 },
-    ,
+    { name: "Bead Accessory", img: "/img/accessories/accessories1.jpg", price: 8200, id: 1 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories2.jpg", price: 12000, id: 2 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories3.jpg", price: 10000, id: 3 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories4.jpg", price: 9000, id: 4 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories5.jpg", price: 5900, id: 5 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories6.jpg", price: 7000, id: 6 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories7.jpg", price: 10000, id: 7 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories8.jpg", price: 4000, id: 8 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories9.jpg", price: 14500, id: 9 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories10.jpg", price: 15000, id: 10 },
+    { name: "Weaved Hand Fan", img: "/img/accessories/accessories11.jpg", price: 9000, id: 11 },
   ];
 
   return (
-    <div className={styles.accessoriesContainer}>
+    <div className={styles.container}>
       <h1 className={styles.heading}>Accessories</h1>
       <p>we offer only the best Accessories</p>
-      <div className={styles.container}>
-        <div className={styles.accessories}>
+      <div className={styles.categoryContent}>
+        <div className={styles.itemsInCategoryWrap}>
           {accessories.map((accessory) => (
-            <div key={accessory.id} className={styles.accessory}>
+            <div key={accessory.id} className={styles.itemInCategory}>
               <div>
                 <Image
                   src={accessory.img}
