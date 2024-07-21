@@ -6,9 +6,29 @@ import styles from "../../app/catalogue/catalogue.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+  interface Product {
+    name: string;
+    price: number;
+    img: string;
+    vid?: string;
+    id?: number;
+  }
 
 const Bridals = () => {
   const [isActive, setIsActive] = useState("");
+
+  const router = useRouter();
+  const handleOrderNow = ({ name, price, img }) => {
+    const productDetails: Product = {
+      name: name,
+      price: price,
+      img: img,
+    };
+    localStorage.setItem("product", JSON.stringify(productDetails));
+  };
+
   const bridals = [
     {
       name: "Traditional Bridal Attire",
@@ -109,9 +129,20 @@ const Bridals = () => {
               <div className={styles.detail}>
                 <h2>{bridal.name}</h2>
                 <h4>₦ {bridal.price}</h4>
-                <Link href="/checkout" className={styles.orderBtn}>
+                <button
+                  onClick={() => (
+                    router.push("/checkout"),
+                    handleOrderNow({
+                      name: bridal.name,
+                      price: bridal.price,
+                      img: bridal.img,
+                      // vid: bridal.vid,
+                    })
+                  )}
+                  className={styles.orderBtn}
+                >
                   Order Now
-                </Link>
+                </button>
               </div>
             </div>
           ))}

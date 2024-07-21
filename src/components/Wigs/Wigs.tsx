@@ -5,9 +5,30 @@ import styles from  '../../app/catalogue/catalogue.module.css';
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+interface Product {
+  name: string;
+  price: number;
+  img: string;
+  vid?: string;
+  id?: number;
+}
 
 const Wigs = () => {
   const [isActive, setIsActive] = useState("");
+
+  const router = useRouter();
+  const handleOrderNow = ({ name, price, img, vid }) => {
+    const productDetails: Product = {
+      name: name,
+      price: price,
+      img: img,
+      vid: vid
+    };
+    localStorage.setItem("product", JSON.stringify(productDetails));
+  };
+
   const wigs = [
     { name: "12inch SDD Bone Straight", img: "/img/hair/12inch SDD bone straight.jpg", price: 20000, id: 1 },
     { name: "613 omotola jessy", img: "/img/hair/613 omotola jessy.jpg", price: 15000, id: 2 },
@@ -79,9 +100,20 @@ const Wigs = () => {
               <div className={styles.detail}>
                 <h2>{wig.name}</h2>
                 <h4>₦ {wig.price}</h4>
-                <Link href="/checkout" className={styles.orderBtn}>
+                <button
+                  onClick={() => (
+                    router.push("/checkout"),
+                    handleOrderNow({
+                      name: wig.name,
+                      price: wig.price,
+                      img: wig.img,
+                      vid: wig.vid,
+                    })
+                  )}
+                  className={styles.orderBtn}
+                >
                   Order Now
-                </Link>
+                </button>
               </div>
             </div>
           ))}

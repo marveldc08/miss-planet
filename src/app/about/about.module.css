@@ -84,18 +84,19 @@
     background-position: center;
     background-color: #5a5a5a;
     background-blend-mode: soft-light;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    top:-100px; ;
+    top:-100px;
     position:sticky;
     left: 0;
     right: 0;
     z-index: -1;
+     padding:  3% 0;
 }
 .staticContentWrap{
     display: flex;
@@ -104,7 +105,7 @@
     align-items: center;
     gap: 35px;
     width: 100%;
-    padding: 0 2%;
+    /* padding:  2%; */
 }
 .staticContentWrap div{
     padding: 4% 6%;
