@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./Header.module.css"; // Import CSS module for styling
 import { BsList } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
+    const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
    const [isScrolled, setIsScrolled] = useState(false);
    const [activeLink, setActiveLink] = useState('')
@@ -116,25 +118,24 @@ const Header = () => {
       {/* Mobile Menu */}
       {isDropdownOpen && (
         <div className={styles.mobileMenu}>
-          <Link
-            href="/"
+          <button
             className={styles.mobileLink}
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            onClick={() => (setIsDropdownOpen(!isDropdownOpen), router.push("/"))}
           >
             Home
-          </Link>
-          <Link href="/catalogue" className={styles.mobileLink}>
+          </button>
+          <button onClick={() => (setIsDropdownOpen(!isDropdownOpen), router.push("/catalogue"))} className={styles.mobileLink}>
             Catalogue
-          </Link>
-          <Link href="/gallery" className={styles.mobileLink}>
+          </button>
+          <button onClick={() => (setIsDropdownOpen(!isDropdownOpen), router.push("/gallery"))} className={styles.mobileLink}>
             Gallery
-          </Link>
-          <Link href="/about" className={styles.mobileLink}>
+          </button>
+          <button onClick={() => (setIsDropdownOpen(!isDropdownOpen), router.push("/about"))} className={styles.mobileLink}>
             About Us
-          </Link>
-          <Link href="/contact" className={styles.mobileLink}>
+          </button>
+          <button onClick={() => (setIsDropdownOpen(!isDropdownOpen), router.push("/contact"))} className={styles.mobileLink}>
             Contact Us
-          </Link>
+          </button>
         </div>
       )}
     </header>

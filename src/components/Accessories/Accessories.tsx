@@ -2,7 +2,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../../app/catalogue/catalogue.module.css'
 
@@ -30,10 +29,10 @@ const Accessories = () => {
 
   const accessories= [
     { name: "Bead Accessory", img: "/img/accessories/accessories1.jpg", price: 8200, id: 1 },
-    { name: "Bead Accessory", img: "/img/accessories/asories4.jpg", price: 9000, id: 4 },
-    { name: "Bead Accessory", img: "/img/accessories/accessccessories2.jpg", price: 12000, id: 2 },
-    { name: "Bead Accessory", img: "/img/accessories/accessories3.jpg", price: 10000, id: 3 },
-    { name: "Bead Accessory", img: "/img/accessories/accesories5.jpg", price: 5900, id: 5 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories2.jpg", price: 9000, id: 4 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories3.jpg", price: 12000, id: 2 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories4.jpg", price: 10000, id: 3 },
+    { name: "Bead Accessory", img: "/img/accessories/accessories5.jpg", price: 5900, id: 5 },
     { name: "Bead Accessory", img: "/img/accessories/accessories6.jpg", price: 7000, id: 6 },
     { name: "Bead Accessory", img: "/img/accessories/accessories7.jpg", price: 10000, id: 7 },
     { name: "Bead Accessory", img: "/img/accessories/accessories8.jpg", price: 4000, id: 8 },

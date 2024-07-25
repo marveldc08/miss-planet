@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "../contact/contact.module.css";
+import styles from "./checkout.module.css";
 import CheckOut from "../../components/CheckOut/CheckOut";
 
 const page = () => {

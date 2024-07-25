@@ -1,0 +1,22 @@
+.jumbotron {
+    background-image: url('/img/checkoutJumbo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    z-index: -1;
+}
+
+.content {
+    max-width: 800px;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}

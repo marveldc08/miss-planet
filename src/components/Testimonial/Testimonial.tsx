@@ -17,6 +17,7 @@ const TestimonialCarousel = ({ testimonials }) => {
     autoplay: true,
     autoplaySpeed: 5000,
   };
+ 
 
   return (
     <div className={styles.testimonialSection}>
@@ -24,58 +25,26 @@ const TestimonialCarousel = ({ testimonials }) => {
         <h2>Testimonials</h2>
         <h4>See what our happy Clients have to say</h4>
       </div>
-      <div className={styles.carouselContainer }>
-        <div className={styles.testimonialCard}>
-          <Image src="/img/blob.png" width='200' height='200' className={styles.avatar} alt="Avatar" />
-          <div>
-            <p
-              className={`${styles.quote}`}
-            >
-              IFZINA exceeded our expectations with their professionalism and
-              attention to detail. Their dedication to delivering on time and
-              within budget is truly commendable.
-            </p>
-            <h2
-              className={styles.author }
-            >
-              John Doe
-            </h2>
-          </div>
-        </div>
-        <div className={styles.testimonialCard}>
-          <img src="/img/blob.png" className={styles.avatar} alt="Avatar" />
-          <div>
-            <p
-              className={`${styles.quote}`}
-            >
-              IFZINA exceeded our expectations with their professionalism and
-              attention to detail. Their dedication to delivering on time and
-              within budget is truly commendable.
-            </p>
-            <h2
-              className={styles.author }
-            >
-              John Doe
-            </h2>
-          </div>
-        </div>
-        <div className={styles.testimonialCard}>
-          <Image src="/img/blob.png" width='200' height='200' className={styles.avatar} alt="Avatar" />
-          <div>
-            <p
-              className={styles.quote}
-            >
-              IFZINA exceeded our expectations with their professionalism and
-              attention to detail. Their dedication to delivering on time and
-              within budget is truly commendable.
-            </p>
-            <h2
-              className={styles.author}
-            >
-              John Doe
-            </h2>
-          </div>
-        </div>
+      <div className={styles.carouselContainer}>
+        {testimonials.map((testimonial) => (
+          <>
+            <div className={styles.testimonialCard}>
+              <div>
+                <Image
+                  src={testimonial.avatar}
+                  width="200"
+                  height="200"
+                  className={styles.avatar}
+                  alt="Avatar"
+                />
+              </div>
+              <div>
+                <p className={`${styles.quote}`}>{testimonial.quote}</p>
+                <h2 className={styles.author}>{testimonial.author}</h2>
+              </div>
+            </div>
+          </>
+        ))}
       </div>
 
       {/* <Slider {...settings} className={styles.slider}>

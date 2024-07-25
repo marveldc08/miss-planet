@@ -8,18 +8,21 @@ const page = () => {
 
      const testimonials = [
        {
-         quote: "Amazing testimonial 1",
-         author: "John Doe",
+         quote:
+           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss planet for presenting me as the Queen I really am.",
+         author: "Toyosi Andrew",
          avatar: "/img/blob.png",
        },
        {
-         quote: "Fantastic testimonial 2",
-         author: "Jane Doe",
+         quote:
+           "  Miss Planet collectibles is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
+         author: "Alice",
          avatar: "/img/blob.png",
        },
        {
-         quote: "Amazing Miss Planet 1",
-         author: "James Ken",
+         quote:
+           " I really love the service here. On my first order from Miss Planet Collectibles I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
+         author: " Mirabel Kandy",
          avatar: "/img/blob.png",
        },
        // Add more testimonials as needed

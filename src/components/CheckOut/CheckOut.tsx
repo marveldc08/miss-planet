@@ -2,6 +2,9 @@ import React, {useState, useEffect} from "react";
 import styles from "./CheckOut.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+import Swal from "sweetalert2";
+
 
   interface Product {
     name: string;
@@ -10,7 +13,7 @@ import Link from "next/link";
     vid?: string;
   }
 
-const ContactUs = () => {
+const CheckOut = () => {
 
 
      const [name, setName] = useState("");
@@ -26,7 +29,95 @@ const ContactUs = () => {
         const retrivedProductDetails = JSON.parse(retrivedProductDetailsString);
         setProductDetails(retrivedProductDetails);
       };
-     })
+     },[])
+
+     const customerDetails ={
+      name:name,
+      phone:phone,
+      email:email,
+      address:address,
+     }
+     const emailDetails = {
+       customerDetails: customerDetails,
+       productDetails: productDetails,
+     };
+
+  const config = {
+    public_key: "FLWPUBK_TEST-2a3a4da93ed21d4e5d65c987e9a4de07-X",
+    tx_ref: Date.now() + "",
+    amount: productDetails.price,
+    currency: "NGN",
+    payment_options: "card, bank transfer,ussd",
+    customer: {
+      email: customerDetails.email,
+      phone_number: customerDetails.phone,
+      name: customerDetails.name,
+    },
+    customizations: {
+      title: "Miss Planet ",
+      description: "Payment for " + productDetails.name,
+      logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+    },
+  };
+
+  const handleFlutterPayment = useFlutterwave(config);
+
+      const callback= async (response) => {
+              const emailResponse = await fetch("/api/sendMail", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(emailDetails),
+              });
+
+              const result = await emailResponse.json();
+           if (response.status === "successful" || ("completed" && result.success)) {
+             Swal.fire({
+               title: "Successful",
+               text: " Your transaction was successful. Kindly check your mail to track your delivary.",
+               icon: "success",
+             });
+           } else {
+             Swal.fire({
+               title: "Opps...",
+               text: "Something went wrong. ",
+               icon: "error",
+             });
+           }
+        closePaymentModal() // this will close the modal programmatically
+       }
+     const onClose = () => {
+      // if (response.status === "successful" || "completed") {
+      // } else {
+        Swal.fire({
+          title: "Are you sure?",
+          text:
+            "Hi " +
+            customerDetails.name +
+            ", are you sure you do not want to get the " +
+            productDetails.name +
+            " ?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, I am sure!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Alright",
+              text: "Do check our other product.",
+              icon: "success",
+            });
+          }
+        });
+      // }
+     }
+
+       
+
+
   return (
     <div className={styles.checkoutSection}>
       <div className={styles.cont}>
@@ -44,7 +135,14 @@ const ContactUs = () => {
               />
             )}
             {productDetails.vid && (
-               <video src={productDetails.vid} width="400"height="400"autoPlay loop muted></video>
+              <video
+                src={productDetails.vid}
+                width="400"
+                height="400"
+                autoPlay
+                loop
+                muted
+              ></video>
             )}
             <div>
               <h5>PRODUCT:</h5>
@@ -117,8 +215,14 @@ const ContactUs = () => {
                 />
               </div>
 
-              <button type="submit" className={styles.button}>
-                Submit
+              <button
+          
+                onClick={(event) => ( event.preventDefault(),
+                  handleFlutterPayment({callback,onClose })
+                )}
+                className={styles.button}
+              >
+                Checkout
               </button>
             </form>
           </div>
@@ -128,4 +232,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default CheckOut;
