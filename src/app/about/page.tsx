@@ -49,12 +49,8 @@ const page = () => {
             </div>
             <div>
               <p>
-                {`  IFZINA brings global expertise and local insight to Nigeria's
-            thriving oil and gas industry. With our comprehensive EPC services,
-            we support projects across the upstream, midstream, and downstream
-            sectors, contributing to the exploration, production,
-            transportation, refining, and distribution of Nigeria's abundant oil
-            and gas resources.`}
+                {`  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, animi. Quia laboriosam vel dignissimos explicabo non. Libero ab provident incidunt odio saepe rerum? Ex qui est, nihil optio suscipit placeat?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ut dolorum debitis, provident aliquid iusto est animi sint dolorem delectus laborum voluptate ipsa quibusdam harum repellendus eaque consequatur perferendis dolor?`}
               </p>
             </div>
           </div>
