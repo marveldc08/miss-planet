@@ -13,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head></head>
+      <head>
+        {" "}
+        <link rel="icon" href="/img/mp-logo-lit.jpeg" />
+      </head>
       <body>
         <Header />
         {children}
