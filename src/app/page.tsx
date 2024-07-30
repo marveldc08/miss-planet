@@ -23,19 +23,19 @@ const Home = () => {
      const testimonials = [
        {
          quote:
-           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss planet for presenting me as the Queen I really am.",
+           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss Planet Collectible for presenting me as the Queen I really am.",
          author: "Toyosi Andrew",
          avatar: "/img/blob.png",
        },
        {
          quote:
-           "  Miss Planet collectibles is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
+           "  Miss Planet collectible is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
          author: "Alice",
          avatar: "/img/blob.png",
        },
        {
          quote:
-           " I really love the service here. On my first order from Miss Planet Collectibles I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
+           " I really love the service here. On my first order from Miss Planet Collectible I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
          author: " Mirabel Kandy",
          avatar: "/img/blob.png",
        },
@@ -98,8 +98,8 @@ const Home = () => {
                   special events, and everyday elegance, our fabrics are
                   designed to bring out and celebrate the beauty and royalty in
                   You. Whether you&apos;re looking for luxurious Aso oke,
-                  vibrant Ankara, or intricate lace, Miss Planet has the perfect
-                  fabric to elevate your style.
+                  vibrant Ankara, or intricate lace, Miss Planet Collectible has
+                  the perfect fabric to elevate your style.
                 </p>
                 <Link href="/catalogue" className={styles.learnMoreBtn}>
                   View Categories &rarr;
@@ -126,12 +126,12 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Accessories</h2>
                 <p className="text-accent-dark text-center ">
-                  Miss Planet offers only the best and quality accessories
-                  ranging from intricate bead necklaces to elegant wrist beads
-                  and statement earrings. Our accessories are designed to
-                  complement your style and celebrate your heritage. Perfect for
-                  weddings, special events, and everyday elegance, our
-                  accessories add the perfect finishing touch to any outfit.
+                  Miss Planet Collectible offers only the best and quality
+                  accessories ranging from intricate bead necklaces to elegant
+                  wrist beads and statement earrings. Our accessories are
+                  designed to complement your style and celebrate your heritage.
+                  Perfect for weddings, special events, and everyday elegance,
+                  our accessories add the perfect finishing touch to any outfit.
                 </p>
                 <Link href="/catalogue" className={styles.learnMoreBtn}>
                   View Categories &rarr;
@@ -146,11 +146,11 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Hair</h2>
                 <p className="text-accent-dark text-center">
-                  At Miss Planet, our premium collection of wigs and hair-do
-                  offers unparalleled versatility and convenience, allowing you
-                  to switch up your look with ease. Whether you desire a
-                  completely different style or simply want to add volume and
-                  length, we have the perfect solution for You.
+                  At Miss Planet Collectible, our premium collection of wigs and
+                  hair-do offers unparalleled versatility and convenience,
+                  allowing you to switch up your look with ease. Whether you
+                  desire a completely different style or simply want to add
+                  volume and length, we have the perfect solution for You.
                 </p>
                 <Link href="/catalogue" className={styles.learnMoreBtn}>
                   View Categories &rarr;
@@ -180,7 +180,9 @@ const Home = () => {
               </p>
               <h4>Unique and Custom Designs</h4>
               <p>
-                {"Our range of fabrics, accessories, and bridal attire features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."}
+                {
+                  "Our range of fabrics, accessories, and bridal attire features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."
+                }
               </p>
 
               {/* <h4>Cultural Significance</h4>
