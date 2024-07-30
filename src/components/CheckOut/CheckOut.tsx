@@ -31,6 +31,7 @@ const CheckOut = () => {
                     const retrivedProductDetails = JSON.parse(
                       retrivedProductDetailsString
                     );
+                    console.log(retrivedProductDetailsString);
                     setProductDetails(retrivedProductDetails);
         }
 
