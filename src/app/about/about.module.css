@@ -84,18 +84,19 @@
     background-position: center;
     background-color: #5a5a5a;
     background-blend-mode: soft-light;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    top:-100px; ;
+    top:-100px;
     position:sticky;
     left: 0;
     right: 0;
     z-index: -1;
+     padding:  3% 0;
 }
 .staticContentWrap{
     display: flex;
@@ -104,14 +105,18 @@
     align-items: center;
     gap: 35px;
     width: 100%;
-    padding: 0 2%;
+    /* padding:  2%; */
 }
 .staticContentWrap div{
     padding: 4% 6%;
     width: 50%;
 }
+.staticContentWrap div p{
+    font-size: 15px;
+}
 .staticContentWrap div:first-of-type{
     border-right: 3px solid theme('colors.primary.light');
+    width: 40%;
 }
 
 .title {
@@ -127,7 +132,10 @@
 
 
 @media screen and (max-width: 768px) {
-
+.title {
+    font-size: 2rem;
+    /* margin-bottom: 1rem; */
+}
  .subTitle{
    font-size: 1.3rem;
     margin-top: 8px;
@@ -144,7 +152,7 @@ width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 80%;
 }
 .staticContentWrap div{
     width: 100%;
@@ -152,7 +160,7 @@ width: 100%;
 .staticContentWrap div:first-of-type{
     border-bottom: 3px solid theme('colors.primary.light');
     border-right: 0px ;
-    width: 90%;
+    width: 80%;
 }
 
 

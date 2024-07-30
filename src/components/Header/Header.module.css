@@ -183,9 +183,12 @@
 
     .mobileLink {
         display: block;
+       border: none;
+       width: 100%;
         padding: 10px 5px;
         color: white;
         text-decoration: none;
+        background-color: transparent;
     }
 
     .mobileLink:hover {

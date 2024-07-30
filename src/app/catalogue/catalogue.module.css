@@ -35,6 +35,24 @@
   color: #333;
 }
 
+.backButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    margin: 1em 2rem;
+    position: fixed;
+    left: 10;
+    right: 0;
+    color: rgb(247, 247, 247);;
+    transition: color 0.3s;
+    width: 50px;
+    height: 50px;
+    background-color: #9d6fe2;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 .categories {
     display: flex;
     flex-direction: column;
@@ -99,6 +117,84 @@
   color: #0056b3;
 }
 
+/* stylee for iddivi8dual caategory */
+
+.container{
+  width: auto;
+  margin: 0 3%;
+  padding: 0px;
+  text-align: center;
+}
+.heading {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.categoryContent{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.itemsInCategoryWrap{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 5px;
+  padding: 4%;
+  width: 100%;
+  height: 100%;
+}
+.itemInCategory{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.itemInCategory div{
+    width: 100%;
+}
+.itemInCategory div> h2{
+   font-size: 15px;
+}
+.itemInCategory img, .itemInCategory video {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.detail{
+    padding-bottom: 10%;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+.itemInCategory div> img, .itemInCategory div> video {
+    width: 100%;
+    height: 300px;
+}
+
+.orderBtn{
+    margin: 0 25px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(247, 247, 247);;
+    transition: color 0.3s;
+    width: 40%;
+    background-color: #9d6fe2;
+    padding: 4%;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 768px){
     .categoryWrap{
@@ -112,5 +208,23 @@
     .category:hover{
     scale:unset;
     transform: unset;
+}
+
+/*  */
+
+
+  .itemsInCategoryWrap{
+    display: grid;
+    grid-template-columns: repeat( 1, minmax(250px, 1fr) );
+   width: 100%; 
+  }
+
+  .itemInCategory{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 100%;
 }
 }
