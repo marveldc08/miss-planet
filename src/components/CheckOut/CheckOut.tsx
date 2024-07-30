@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { useRouter } from "next/router";
 import styles from "./CheckOut.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,6 +38,14 @@ const CheckOut = () => {
 
       };
      },[])
+
+       useEffect(() => {
+         if (router.query) {
+           const retrivedProductDetails = JSON.parse(router.query);
+           setProductDetails(retrivedProductDetails);
+         }
+       }, [router.query]);
+
 
      const customerDetails ={
       name:name,

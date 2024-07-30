@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import styles from '../../app/catalogue/catalogue.module.css'
 
@@ -24,7 +24,11 @@ const Accessories = () => {
          img: img,
          id: id,
       }
-      if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
+      router.push({
+        pathname: "/checkout",
+        query: JSON.stringify(productDetails),
+      });
+      // if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
         
   }
 
@@ -63,7 +67,7 @@ const Accessories = () => {
                 <h4>₦ {accessory.price}</h4>
                 <button
                   onClick={() => (
-                    router.push("/checkout"),
+                    
                     handleOrderNow({
                       name: accessory.name,
                       price: accessory.price,

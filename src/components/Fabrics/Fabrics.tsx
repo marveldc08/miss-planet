@@ -5,7 +5,7 @@ import styles from "../../app/catalogue/catalogue.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 interface Product {
   name: string;
@@ -24,7 +24,10 @@ const Fabrics = () => {
         price: price,
         img: img,
       };
-      if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
+           router.push({
+             pathname: "/checkout",
+             query: JSON.stringify(productDetails),
+           });
         
     };
 
@@ -133,7 +136,6 @@ const Fabrics = () => {
                 <h4>₦ {fabric.price}</h4>
                 <button
                   onClick={() => (
-                    router.push("/checkout"),
                     handleOrderNow({
                       name: fabric.name,
                       price: fabric.price,

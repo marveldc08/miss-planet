@@ -5,7 +5,7 @@ import styles from  '../../app/catalogue/catalogue.module.css';
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 interface Product {
   name: string;
@@ -26,7 +26,10 @@ const Wigs = () => {
       img: img,
       vid: vid
     };
-    if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
+          router.push({
+            pathname: "/checkout",
+            query: JSON.stringify(productDetails),
+          });
       
   };
 
@@ -103,7 +106,6 @@ const Wigs = () => {
                 <h4>₦ {wig.price}</h4>
                 <button
                   onClick={() => (
-                    router.push("/checkout"),
                     handleOrderNow({
                       name: wig.name,
                       price: wig.price,
