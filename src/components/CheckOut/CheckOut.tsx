@@ -8,9 +8,9 @@ import Swal from "sweetalert2";
 
 
   interface Product {
-    name: string;
-    price: number;
-    img: string;
+    name?: string;
+    price?: number;
+    img?: string;
     vid?: string;
   }
 
@@ -24,25 +24,26 @@ const CheckOut = () => {
      const [comment, setComment] = useState("");
      const [productDetails, setProductDetails] = useState<Product>({name: '',price: 0,img: '',vid: '',});
 
-     useEffect(() => {
-      return () => {
-        if (typeof window !== "undefined"){
-                    const retrivedProductDetailsString =
-                      localStorage.getItem("product");
-                    const retrivedProductDetails = JSON.parse(
-                      retrivedProductDetailsString
-                    );
-                    console.log(retrivedProductDetailsString);
-                    setProductDetails(retrivedProductDetails);
-        }
+       const router = useRouter();
+    //  useEffect(() => {
+    //   return () => {
+    //     if (typeof window !== "undefined"){
+    //                 const retrivedProductDetailsString =
+    //                   localStorage.getItem("product");
+    //                 const retrivedProductDetails = JSON.parse(
+    //                   retrivedProductDetailsString
+    //                 );
+    //            
+    //                 setProductDetails(retrivedProductDetails);
+    //     }
 
-      };
-     },[])
+    //   };
+    //  },[])
 
        useEffect(() => {
          if (router.query) {
-           const retrivedProductDetails = JSON.parse(router.query);
-           setProductDetails(retrivedProductDetails);
+           console.log(router.query);
+           setProductDetails(router.query);
          }
        }, [router.query]);
 
