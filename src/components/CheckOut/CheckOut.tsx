@@ -25,21 +25,6 @@ const CheckOut = () => {
      const [productDetails, setProductDetails] = useState<Product>({name: '',price: 0,img: '',vid: '',});
 
        const router = useRouter();
-    //  useEffect(() => {
-    //   return () => {
-    //     if (typeof window !== "undefined"){
-    //                 const retrivedProductDetailsString =
-    //                   localStorage.getItem("product");
-    //                 const retrivedProductDetails = JSON.parse(
-    //                   retrivedProductDetailsString
-    //                 );
-    //            
-    //                 setProductDetails(retrivedProductDetails);
-    //     }
-
-    //   };
-    //  },[])
-
        useEffect(() => {
          if (router.query) {
            console.log(router.query);
