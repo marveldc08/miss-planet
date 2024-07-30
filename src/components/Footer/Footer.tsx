@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
           <h4 className={styles.heading}>Follow Us</h4>
           <div className={styles.socialIcons}>
-            <Link href={"https://wa.me/2348135705904"}>
+            <Link href={"https://wa.me/2348135705904"} target="_blank">
               <IoLogoWhatsapp
                 className={styles.icon}
                 style={{ color: "#128c7e" }}
@@ -81,6 +81,7 @@ const Footer = () => {
               href={
                 "https://www.facebook.com/missplanetconcepts?mibextid=ZbWKwL"
               }
+              target="_blank"
             >
               <FaFacebook
                 className={styles.icon}
@@ -92,6 +93,7 @@ const Footer = () => {
               href={
                 "https://www.instagram.com/missplanetconcepts?igsh=MXN3azJ4MWNydGhwMg=="
               }
+              target="_blank"
             >
               <AiFillInstagram
                 className={styles.icon}
@@ -99,7 +101,7 @@ const Footer = () => {
               />
               @missplanetconcepts
             </Link>
-            <Link href={mailtoLink}>
+            <Link href={mailtoLink} target="_blank">
               <BiLogoGmail
                 className={styles.icon}
                 style={{ color: "#f32323" }}
