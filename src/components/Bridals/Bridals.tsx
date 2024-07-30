@@ -26,7 +26,10 @@ const Bridals = () => {
       price: price,
       img: img,
     };
-    localStorage.setItem("product", JSON.stringify(productDetails));
+    if (typeof window !== "undefined"){
+      localStorage.setItem("product", JSON.stringify(productDetails));
+    }
+      
   };
 
   const bridals = [

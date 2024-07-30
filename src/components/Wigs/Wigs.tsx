@@ -26,7 +26,8 @@ const Wigs = () => {
       img: img,
       vid: vid
     };
-    localStorage.setItem("product", JSON.stringify(productDetails));
+    if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
+      
   };
 
   const wigs = [

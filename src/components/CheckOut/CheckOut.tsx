@@ -25,9 +25,15 @@ const CheckOut = () => {
 
      useEffect(() => {
       return () => {
-        const retrivedProductDetailsString = localStorage.getItem("product");
-        const retrivedProductDetails = JSON.parse(retrivedProductDetailsString);
-        setProductDetails(retrivedProductDetails);
+        if (typeof window !== "undefined"){
+                    const retrivedProductDetailsString =
+                      localStorage.getItem("product");
+                    const retrivedProductDetails = JSON.parse(
+                      retrivedProductDetailsString
+                    );
+                    setProductDetails(retrivedProductDetails);
+        }
+
       };
      },[])
 
@@ -72,7 +78,7 @@ const CheckOut = () => {
               });
 
               const result = await emailResponse.json();
-           if (response.status === "successful" || ("completed" && result.success)) {
+           if (response.status === "successful" || response.status === "completed" && result.success) {
              Swal.fire({
                title: "Successful",
                text: " Your transaction was successful. Kindly check your mail to track your delivary.",
