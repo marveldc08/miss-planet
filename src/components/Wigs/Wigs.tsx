@@ -20,16 +20,14 @@ const Wigs = () => {
 
   const router = useRouter();
   const handleOrderNow = ({ name, price, img, vid }) => {
-    const productDetails: Product = {
+    const productDetails = {
       name: name,
       price: price,
       img: img,
       vid: vid
     };
-          router.push({
-            pathname: "/checkout",
-            query: JSON.stringify(productDetails),
-          });
+    const queryString = new URLSearchParams(productDetails).toString();
+    router.push(`/checkout?${queryString}`);
       
   };
 

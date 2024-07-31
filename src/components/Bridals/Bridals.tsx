@@ -6,7 +6,7 @@ import styles from "../../app/catalogue/catalogue.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
   interface Product {
     name: string;
@@ -20,16 +20,16 @@ const Bridals = () => {
   const [isActive, setIsActive] = useState("");
 
   const router = useRouter();
+
   const handleOrderNow = ({ name, price, img }) => {
-    const productDetails: Product = {
+    const productDetails = {
       name: name,
       price: price,
       img: img,
     };
-          router.push({
-            pathname: "/checkout",
-            query: JSON.stringify(productDetails),
-          });
+
+    const queryString = new URLSearchParams(productDetails).toString();
+    router.push(`/checkout?${queryString}`);
       
   };
 

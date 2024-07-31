@@ -18,16 +18,14 @@ const Accessories = () => {
   const [isActive, setIsActive] = useState('')
   const router = useRouter()
   const handleOrderNow = ({name, price, img, id }) => {
-     const productDetails:Product = {
+     const productDetails = {
          name: name,
          price: price,
          img: img,
          id: id,
       }
-      router.push({
-        pathname: "/checkout",
-        query: JSON.stringify(productDetails),
-      });
+    const queryString = new URLSearchParams(productDetails).toString();
+    router.push(`/checkout?${queryString}`);
       // if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
         
   }
