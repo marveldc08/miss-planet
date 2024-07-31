@@ -21,24 +21,63 @@ const CheckOut = () => {
   const [address, setAddress] = useState("");
   const [transactionSuccess, setTransactionSuccess] = useState("");
   const [productDetails, setProductDetails] = useState<Product>({
-    name: "",
-    price: 0,
-    img: "",
-    vid: "",
-  });
+          name: "",
+          price: 0,
+          img: "",
+          vid: "",
+        });
 
- const searchParams = useSearchParams();
-  // console.log(router.prefetch);
-  useEffect(() => {
-    const product: Product = {
-      name: searchParams.get("name"),
-      price: JSON.parse(searchParams.get("price")),
-      img: searchParams.get("img"),
-      vid: searchParams.get("vid"),
-    };
-    setProductDetails(product);
-  }, [searchParams]);
 
+ 
+
+  const ProductDetailContent =() => {
+
+
+
+     const searchParams = useSearchParams();
+     // console.log(router.prefetch);
+     useEffect(() => {
+       const product: Product = {
+         name: searchParams.get("name"),
+         price: JSON.parse(searchParams.get("price")),
+         img: searchParams.get("img"),
+         vid: searchParams.get("vid"),
+       };
+       setProductDetails(product);
+     }, [searchParams]);
+
+       if (!productDetails) {
+         return <div>Loading...</div>;
+       }
+
+
+
+    return (
+      <div className={styles.productDetails}>
+        {productDetails.img && (
+          <Image src={productDetails.img} width={400} height={400} alt="blob" />
+        )}
+        {productDetails.vid && (
+          <video
+            src={productDetails.vid}
+            width="400"
+            height="400"
+            autoPlay
+            loop
+            muted
+          ></video>
+        )}
+        <div>
+          <h5>PRODUCT:</h5>
+          <h6>{productDetails.name}</h6>
+        </div>
+        <div>
+          <h5>PRICE:</h5>
+          <h6>₦ {productDetails.price}</h6>
+        </div>
+      </div>
+    );
+  }
 
 
 
@@ -52,6 +91,10 @@ const CheckOut = () => {
     customerDetails: customerDetails,
     productDetails: productDetails,
   };
+
+
+
+
 
   const config = {
     public_key: "FLWPUBK_TEST-2a3a4da93ed21d4e5d65c987e9a4de07-X",
@@ -139,37 +182,10 @@ const CheckOut = () => {
           <h2>Check Out</h2>
         </div>
         <div className={styles.checkoutBody}>
-          <Suspense>
-                     <div className={styles.productDetails}>
-            {productDetails.img && (
-              <Image
-                src={productDetails.img}
-                width={400}
-                height={400}
-                alt="blob"
-              />
-            )}
-            {productDetails.vid && (
-              <video
-                src={productDetails.vid}
-                width="400"
-                height="400"
-                autoPlay
-                loop
-                muted
-              ></video>
-            )}
-            <div>
-              <h5>PRODUCT:</h5>
-              <h6>{productDetails.name}</h6>
-            </div>
-            <div>
-              <h5>PRICE:</h5>
-              <h6>₦ {productDetails.price}</h6>
-            </div>
-          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+          <ProductDetailContent/>
           </Suspense>
- 
+
           <div className={styles.checkoutForm}>
             <form //   onSubmit={handleSubmit}
               className={styles.form}
