@@ -1,53 +1,100 @@
-import React, {useState, useEffect} from "react";
+"use client";
+import React, { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./CheckOut.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import Swal from "sweetalert2";
 
-
-  interface Product {
-    name: string;
-    price: number;
-    img: string;
-    vid?: string;
-  }
+interface Product {
+  name?: string;
+  price?: number;
+  img?: string;
+  vid?: string;
+}
 
 const CheckOut = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [transactionSuccess, setTransactionSuccess] = useState("");
+  const [productDetails, setProductDetails] = useState<Product>({
+          name: "",
+          price: 0,
+          img: "",
+          vid: "",
+        });
 
 
-     const [name, setName] = useState("");
-     const [phone, setPhone] = useState("");
-     const [email, setEmail] = useState("");
-     const [address, setAddress] = useState("");
-     const [comment, setComment] = useState("");
-     const [productDetails, setProductDetails] = useState<Product>({name: '',price: 0,img: '',vid: '',});
+ 
 
+  const ProductDetailContent =() => {
+
+
+
+     const searchParams = useSearchParams();
+     // console.log(router.prefetch);
      useEffect(() => {
-      return () => {
-        if (typeof window !== "undefined"){
-                    const retrivedProductDetailsString =
-                      localStorage.getItem("product");
-                    const retrivedProductDetails = JSON.parse(
-                      retrivedProductDetailsString
-                    );
-                    console.log(retrivedProductDetailsString);
-                    setProductDetails(retrivedProductDetails);
-        }
+       const product: Product = {
+         name: searchParams.get("name"),
+         price: JSON.parse(searchParams.get("price")),
+         img: searchParams.get("img"),
+         vid: searchParams.get("vid"),
+       };
+       setProductDetails(product);
+     }, [searchParams]);
 
-      };
-     },[])
+       if (!productDetails) {
+         return <div>Loading...</div>;
+       }
 
-     const customerDetails ={
-      name:name,
-      phone:phone,
-      email:email,
-      address:address,
-     }
-     const emailDetails = {
-       customerDetails: customerDetails,
-       productDetails: productDetails,
-     };
+
+
+    return (
+      <div className={styles.productDetails}>
+        {productDetails.img && (
+          <Image src={productDetails.img} width={400} height={400} alt="blob" />
+        )}
+        {productDetails.vid && (
+          <video
+            src={productDetails.vid}
+            width="400"
+            height="400"
+            autoPlay
+            loop
+            muted
+          ></video>
+        )}
+        <div>
+          <h5>PRODUCT:</h5>
+          <h6>{productDetails.name}</h6>
+        </div>
+        <div>
+          <h5>PRICE:</h5>
+          <h6>₦ {productDetails.price}</h6>
+        </div>
+      </div>
+    );
+  }
+
+
+
+  const customerDetails = {
+    name: name,
+    phone: phone,
+    email: email,
+    address: address,
+  };
+  const emailDetails = {
+    customerDetails: customerDetails,
+    productDetails: productDetails,
+  };
+
+
+
+
 
   const config = {
     public_key: "FLWPUBK_TEST-2a3a4da93ed21d4e5d65c987e9a4de07-X",
@@ -69,61 +116,64 @@ const CheckOut = () => {
 
   const handleFlutterPayment = useFlutterwave(config);
 
-      const callback= async (response) => {
-              const emailResponse = await fetch("/api/sendMail", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(emailDetails),
-              });
+  const callback = async (response) => {
+    const emailResponse = await fetch("/api/sendMail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emailDetails),
+    });
 
-              const result = await emailResponse.json();
-           if (response.status === "successful" || response.status === "completed" && result.success) {
-             Swal.fire({
-               title: "Successful",
-               text: " Your transaction was successful. Kindly check your mail to track your delivary.",
-               icon: "success",
-             });
-           } else {
-             Swal.fire({
-               title: "Opps...",
-               text: "Something went wrong. ",
-               icon: "error",
-             });
-           }
-        closePaymentModal() // this will close the modal programmatically
-       }
-     const onClose = () => {
-      // if (response.status === "successful" || "completed") {
-      // } else {
+    const result = await emailResponse.json();
+    if ((response.status === "successful" ||response.status === "completed") && result.success) {
+      setTransactionSuccess("successful")
+      Swal.fire({
+        title: "Successful",
+        text: " Your transaction was successful. Kindly check your mail to track your delivary.",
+        icon: "success",
+      });
+    } else {
+      Swal.fire({
+        title: "Opps...",
+        text: "Something went wrong. ",
+        icon: "error",
+      });
+    }
+    closePaymentModal(); // this will close the modal programmatically
+  };
+  const onClose = () => {
+    if (transactionSuccess === "successful") {
+          Swal.fire({
+            title: "Successful",
+            text: " Your transaction was successful. Kindly check your mail to track your delivary.",
+            icon: "success",
+          });
+    } else {
+    Swal.fire({
+      title: "Are you sure?",
+      text:
+        "Hi " +
+        customerDetails.name +
+        ", are you sure you do not want to get the " +
+        productDetails.name +
+        " ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, I am sure!",
+    }).then((result) => {
+      if (result.isConfirmed) {
         Swal.fire({
-          title: "Are you sure?",
-          text:
-            "Hi " +
-            customerDetails.name +
-            ", are you sure you do not want to get the " +
-            productDetails.name +
-            " ?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, I am sure!",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            Swal.fire({
-              title: "Alright",
-              text: "Do check our other product.",
-              icon: "success",
-            });
-          }
+          title: "Alright",
+          text: "Do check our other product.",
+          icon: "success",
         });
-      // }
-     }
-
-       
-
+      }
+    });
+    }
+  };
 
   return (
     <div className={styles.checkoutSection}>
@@ -132,34 +182,10 @@ const CheckOut = () => {
           <h2>Check Out</h2>
         </div>
         <div className={styles.checkoutBody}>
-          <div className={styles.productDetails}>
-            {productDetails.img && (
-              <Image
-                src={productDetails.img}
-                width={400}
-                height={400}
-                alt="blob"
-              />
-            )}
-            {productDetails.vid && (
-              <video
-                src={productDetails.vid}
-                width="400"
-                height="400"
-                autoPlay
-                loop
-                muted
-              ></video>
-            )}
-            <div>
-              <h5>PRODUCT:</h5>
-              <h6>{productDetails.name}</h6>
-            </div>
-            <div>
-              <h5>PRICE:</h5>
-              <h6>₦ {productDetails.price}</h6>
-            </div>
-          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+          <ProductDetailContent/>
+          </Suspense>
+
           <div className={styles.checkoutForm}>
             <form //   onSubmit={handleSubmit}
               className={styles.form}
@@ -223,9 +249,9 @@ const CheckOut = () => {
               </div>
 
               <button
-          
-                onClick={(event) => ( event.preventDefault(),
-                  handleFlutterPayment({callback,onClose })
+                onClick={(event) => (
+                  event.preventDefault(),
+                  handleFlutterPayment({ callback, onClose })
                 )}
                 className={styles.button}
               >

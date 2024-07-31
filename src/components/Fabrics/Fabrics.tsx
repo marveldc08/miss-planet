@@ -5,7 +5,7 @@ import styles from "../../app/catalogue/catalogue.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 interface Product {
   name: string;
@@ -19,12 +19,13 @@ const Fabrics = () => {
 
     const router = useRouter();
     const handleOrderNow = ({ name, price, img }) => {
-      const productDetails: Product = {
+      const productDetails = {
         name: name,
         price: price,
         img: img,
       };
-      if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
+    const queryString = new URLSearchParams(productDetails).toString();
+    router.push(`/checkout?${queryString}`);
         
     };
 
@@ -133,7 +134,6 @@ const Fabrics = () => {
                 <h4>₦ {fabric.price}</h4>
                 <button
                   onClick={() => (
-                    router.push("/checkout"),
                     handleOrderNow({
                       name: fabric.name,
                       price: fabric.price,

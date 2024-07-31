@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import styles from '../../app/catalogue/catalogue.module.css'
 
@@ -18,13 +18,15 @@ const Accessories = () => {
   const [isActive, setIsActive] = useState('')
   const router = useRouter()
   const handleOrderNow = ({name, price, img, id }) => {
-     const productDetails:Product = {
+     const productDetails = {
          name: name,
          price: price,
          img: img,
          id: id,
       }
-      if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
+    const queryString = new URLSearchParams(productDetails).toString();
+    router.push(`/checkout?${queryString}`);
+      // if (typeof window !== "undefined"){localStorage.setItem("product", JSON.stringify(productDetails));}
         
   }
 
@@ -63,7 +65,7 @@ const Accessories = () => {
                 <h4>₦ {accessory.price}</h4>
                 <button
                   onClick={() => (
-                    router.push("/checkout"),
+                    
                     handleOrderNow({
                       name: accessory.name,
                       price: accessory.price,

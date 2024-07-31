@@ -20,15 +20,16 @@ const Bridals = () => {
   const [isActive, setIsActive] = useState("");
 
   const router = useRouter();
+
   const handleOrderNow = ({ name, price, img }) => {
-    const productDetails: Product = {
+    const productDetails = {
       name: name,
       price: price,
       img: img,
     };
-    if (typeof window !== "undefined"){
-      localStorage.setItem("product", JSON.stringify(productDetails));
-    }
+
+    const queryString = new URLSearchParams(productDetails).toString();
+    router.push(`/checkout?${queryString}`);
       
   };
 
@@ -134,7 +135,6 @@ const Bridals = () => {
                 <h4>₦ {bridal.price}</h4>
                 <button
                   onClick={() => (
-                    router.push("/checkout"),
                     handleOrderNow({
                       name: bridal.name,
                       price: bridal.price,
