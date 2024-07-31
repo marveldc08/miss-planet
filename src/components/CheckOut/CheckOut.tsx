@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./CheckOut.module.css";
 import Image from "next/image";
@@ -19,7 +19,7 @@ const CheckOut = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
-  const [comment, setComment] = useState("");
+  const [transactionSuccess, setTransactionSuccess] = useState("");
   const [productDetails, setProductDetails] = useState<Product>({
     name: "",
     price: 0,
@@ -83,10 +83,8 @@ const CheckOut = () => {
     });
 
     const result = await emailResponse.json();
-    if (
-      response.status === "successful" ||
-      (response.status === "completed" && result.success)
-    ) {
+    if ((response.status === "successful" ||response.status === "completed") && result.success) {
+      setTransactionSuccess("successful")
       Swal.fire({
         title: "Successful",
         text: " Your transaction was successful. Kindly check your mail to track your delivary.",
@@ -102,8 +100,13 @@ const CheckOut = () => {
     closePaymentModal(); // this will close the modal programmatically
   };
   const onClose = () => {
-    // if (response.status === "successful" || "completed") {
-    // } else {
+    if (transactionSuccess === "successful") {
+          Swal.fire({
+            title: "Successful",
+            text: " Your transaction was successful. Kindly check your mail to track your delivary.",
+            icon: "success",
+          });
+    } else {
     Swal.fire({
       title: "Are you sure?",
       text:
@@ -126,7 +129,7 @@ const CheckOut = () => {
         });
       }
     });
-    // }
+    }
   };
 
   return (
@@ -136,7 +139,8 @@ const CheckOut = () => {
           <h2>Check Out</h2>
         </div>
         <div className={styles.checkoutBody}>
-          <div className={styles.productDetails}>
+          <Suspense>
+                     <div className={styles.productDetails}>
             {productDetails.img && (
               <Image
                 src={productDetails.img}
@@ -164,6 +168,8 @@ const CheckOut = () => {
               <h6>₦ {productDetails.price}</h6>
             </div>
           </div>
+          </Suspense>
+ 
           <div className={styles.checkoutForm}>
             <form //   onSubmit={handleSubmit}
               className={styles.form}
