@@ -93,6 +93,12 @@
     .image:nth-child( 17n ) {
       height: 25em;
     }
+    .image:nth-child( 19n ) {
+      height: 25em;
+    }
+    .image:nth-child( 23n ) {
+      height: 25em;
+    }
     .image:nth-child( 3n ) {
       height: 25em;
     }
