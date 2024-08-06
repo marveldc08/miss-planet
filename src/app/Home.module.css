@@ -6,7 +6,7 @@
 }
 
 .jumbotron {
-    background-image: url('/img/jumbo-img.jpg');
+    background-image: url('https://res.cloudinary.com/dc-cloud/image/upload/v1722876956/Missplanet%20Collectibles/jumbo-img_m6xfyp.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -139,7 +139,7 @@
     background-color: theme('colors.secondary.DEFAULT');
 }
 .staticSection{
-    background-image: url('/img/attireLady.jpg');
+    background-image: url('https://res.cloudinary.com/dc-cloud/image/upload/v1722876954/Missplanet%20Collectibles/attireLady_dnfzx7.jpg');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.6);

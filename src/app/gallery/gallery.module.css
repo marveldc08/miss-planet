@@ -1,7 +1,7 @@
 /* GalleryPage.module.css */
 
 .jumbotron {
-    background-image: url('/img/galleryJumbo.jpg');
+    background-image: url('https://res.cloudinary.com/dc-cloud/image/upload/v1722877403/Missplanet%20Collectibles/galleryJumbo_hs0bm2.jpg');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -51,6 +51,7 @@
   background-color: #eee;
   height: 200px; /* Set a default height for the images */
   border-radius: 8px;
+  width: 100%;
    /* border: 1px solid red; */
 }
 

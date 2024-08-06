@@ -63,7 +63,7 @@ const Home = () => {
             <div className={styles.offerCard}>
               <div className={styles.cardImageContainer}>
                 <Image
-                  src="/img/bridal.jpeg"
+                  src="https://res.cloudinary.com/dc-cloud/image/upload/v1722876670/Missplanet%20Collectibles/bridal_pz8x3i.jpg"
                   width={500}
                   height={400}
                   alt="African Bride"
@@ -107,7 +107,7 @@ const Home = () => {
               </div>
               <div className={styles.cardImageContainer}>
                 <Image
-                  src="/img/fabric.jpeg"
+                  src="https://res.cloudinary.com/dc-cloud/image/upload/v1722876761/Missplanet%20Collectibles/fabric_jomf14.jpg"
                   width={500}
                   height={400}
                   alt="fabric"
@@ -117,7 +117,7 @@ const Home = () => {
             <div className={styles.offerCard}>
               <div className={`${styles.cardImageContainer} ${"w-[40%]"}`}>
                 <Image
-                  src="/img/accessories.jpeg"
+                  src="https://res.cloudinary.com/dc-cloud/image/upload/v1722876229/Missplanet%20Collectibles/accessories_xd7oei.jpg"
                   width={500}
                   height={400}
                   alt="Accessories"
@@ -157,7 +157,12 @@ const Home = () => {
                 </Link>
               </div>
               <div className={styles.cardImageContainer}>
-                <Image src="/img/wig.jpeg" width={500} height={400} alt="wig" />
+                <Image
+                  src="https://res.cloudinary.com/dc-cloud/image/upload/v1722876833/Missplanet%20Collectibles/wig_tuqkqe.jpg"
+                  width={500}
+                  height={400}
+                  alt="wig"
+                />
               </div>
             </div>
           </div>

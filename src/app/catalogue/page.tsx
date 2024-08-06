@@ -14,7 +14,7 @@ const Page = () => {
   const [isActive, setIsActive] = useState('');
 
   return (
-    <div >
+    <div>
       <section className={styles.jumbotron}>
         <div className={styles.content}>
           <h1 className={styles.title}>Product Catalogue</h1>
@@ -37,7 +37,7 @@ const Page = () => {
                 className={styles.category}
                 onClick={() => setIsActive("bridals")}
                 style={{
-                  backgroundImage: `url('/img/gallery/galleryImg5.jpeg')`,
+                  backgroundImage: `url('https://res.cloudinary.com/dc-cloud/image/upload/v1722878336/Missplanet%20Collectibles/gallery/galleryImg5_qt1u30.jpg')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -49,7 +49,7 @@ const Page = () => {
                 className={styles.category}
                 onClick={() => setIsActive("accessories")}
                 style={{
-                  backgroundImage: `url('/img/gallery/galleryImg9.jpeg')`,
+                  backgroundImage: `url('https://res.cloudinary.com/dc-cloud/image/upload/v1722878340/Missplanet%20Collectibles/gallery/galleryImg9_fbuhld.jpg')`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
@@ -62,7 +62,7 @@ const Page = () => {
                 className={styles.category}
                 onClick={() => setIsActive("fabrics")}
                 style={{
-                  backgroundImage: `url('/img/gallery/galleryImg11.jpeg')`,
+                  backgroundImage: `url('https://res.cloudinary.com/dc-cloud/image/upload/v1722878341/Missplanet%20Collectibles/gallery/galleryImg11_pa9ach.jpg')`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
@@ -73,7 +73,7 @@ const Page = () => {
                 className={styles.category}
                 onClick={() => setIsActive("wigs")}
                 style={{
-                  backgroundImage: `url('/img/gallery/galleryImg13.jpeg')`,
+                  backgroundImage: `url('https://res.cloudinary.com/dc-cloud/image/upload/v1722878344/Missplanet%20Collectibles/gallery/galleryImg13_wha5sl.jpg')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
