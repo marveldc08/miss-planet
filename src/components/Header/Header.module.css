@@ -22,7 +22,11 @@
 
 .logo {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-top: 4px;
+    padding: 5px;
 }
 .logoBg{
     display: flex;
@@ -32,12 +36,13 @@
     background-color: #ffffff;
     border-radius: 40px;
     margin-top: 4px;
-    padding: 0;
+    padding: 5px;
 }
 
 .logoImage {
-    margin-right: 10px;
+    margin:0 5px;
     border-radius: 50%;
+    
 }
 
 .nav {

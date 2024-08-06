@@ -51,8 +51,8 @@ const Header = () => {
             <Image
               src="/img/mp-logo.png"
               alt="Logo"
-              width={160}
-              height={110}
+              width={110}
+              height={60}
               className={styles.logoImage}
             />
           </Link>

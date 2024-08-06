@@ -1,6 +1,6 @@
 
 .jumbotron {
-    background-image: url('/img/aboutJumbo.jpg');
+    background-image: url('https://res.cloudinary.com/dc-cloud/image/upload/v1722875938/Missplanet%20Collectibles/aboutJumbo_yavuxh.jpg');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -79,7 +79,7 @@
 
 
 .staticSection{
-    background-image: url('/img/attireLady.jpg');
+    background-image: url('https://res.cloudinary.com/dc-cloud/image/upload/v1722876954/Missplanet%20Collectibles/attireLady_dnfzx7.jpg');
     background-size: cover;
     background-position: center;
     background-color: #5a5a5a;
