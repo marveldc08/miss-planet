@@ -15,13 +15,13 @@ const page = () => {
        },
        {
          quote:
-           "  Miss Planet collectibles is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
+           "  Miss Planet collectables is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products and services i get at Miss Planet are topnoch.",
          author: "Alice",
          avatar: "/img/blob.png",
        },
        {
          quote:
-           " I really love the service here. On my first order from Miss Planet Collectibles I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
+           " I really love the service here. On my first order from Miss Planet Collectables I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
          author: " Mirabel Kandy",
          avatar: "/img/blob.png",
        },
