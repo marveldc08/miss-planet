@@ -23,19 +23,19 @@ const Home = () => {
      const testimonials = [
        {
          quote:
-           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss Planet Collectible for presenting me as the Queen I really am.",
+           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss Planet Collectables for presenting me as the Queen I really am.",
          author: "Toyosi Andrew",
          avatar: "/img/blob.png",
        },
        {
          quote:
-           "  Miss Planet collectible is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
+           "  Miss Planet collectables is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
          author: "Alice",
          avatar: "/img/blob.png",
        },
        {
          quote:
-           " I really love the service here. On my first order from Miss Planet Collectible I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
+           " I really love the service here. On my first order from Miss Planet Collectables I planned to buy a bone straight wig but browsing the net for a vendor was stressful as most of the ones I found were not meeting my taste until a friend told me of Miss Planet... OMG!... the platform was everything I was looking for, I got quality products, affordable prices and awesome delivery service. I sincerly recommend Miss planet.",
          author: " Mirabel Kandy",
          avatar: "/img/blob.png",
        },
@@ -98,7 +98,7 @@ const Home = () => {
                   special events, and everyday elegance, our fabrics are
                   designed to bring out and celebrate the beauty and royalty in
                   You. Whether you&apos;re looking for luxurious Aso oke,
-                  vibrant Ankara, or intricate lace, Miss Planet Collectible has
+                  vibrant Ankara, or intricate lace, Miss Planet Collectables has
                   the perfect fabric to elevate your style.
                 </p>
                 <Link href="/catalogue" className={styles.learnMoreBtn}>
@@ -126,7 +126,7 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Accessories</h2>
                 <p className="text-accent-dark text-center ">
-                  Miss Planet Collectible offers only the best and quality
+                  Miss Planet Collectables offers only the best and quality
                   accessories ranging from intricate bead necklaces to elegant
                   wrist beads and statement earrings. Our accessories are
                   designed to complement your style and celebrate your heritage.
@@ -146,7 +146,7 @@ const Home = () => {
               <div className={styles.cardText}>
                 <h2 className={"text-center"}>Hair</h2>
                 <p className="text-accent-dark text-center">
-                  At Miss Planet Collectible, our premium collection of wigs and
+                  At Miss Planet Collectables, our premium collection of wigs and
                   hair-do offers unparalleled versatility and convenience,
                   allowing you to switch up your look with ease. Whether you
                   desire a completely different style or simply want to add
