@@ -31,17 +31,17 @@ const Accessories = () => {
   }
 
   const accessories= [
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880104/Missplanet%20Collectibles/accessories/accessories1_bcmazi.jpg", price: 8200, id: 1 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880105/Missplanet%20Collectibles/accessories/accessories2_bfchrp.jpg", price: 9000, id: 4 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880105/Missplanet%20Collectibles/accessories/accessories3_p3keuf.jpg", price: 12000, id: 2 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880105/Missplanet%20Collectibles/accessories/accessories4_rkgswo.jpg", price: 10000, id: 3 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880106/Missplanet%20Collectibles/accessories/accessories5_y7cjsc.jpg", price: 5900, id: 5 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880109/Missplanet%20Collectibles/accessories/accessories6_zaa93e.jpg", price: 7000, id: 6 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880109/Missplanet%20Collectibles/accessories/accessories7_ykhk7s.jpg", price: 10000, id: 7 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880110/Missplanet%20Collectibles/accessories/accessories8_by3pkk.jpg", price: 4000, id: 8 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880111/Missplanet%20Collectibles/accessories/accessories9_cebynd.jpg", price: 14500, id: 9 },
-    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880112/Missplanet%20Collectibles/accessories/accessories10_thkacs.jpg", price: 15000, id: 10 },
-    { name: "Weaved Hand Fan", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880113/Missplanet%20Collectibles/accessories/accessories11_q4p1d4.jpg", price: 9000, id: 11 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880104/Missplanet%20Collectibles/accessories/accessories1_bcmazi.jpg", price: 65000, id: 1 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880105/Missplanet%20Collectibles/accessories/accessories2_bfchrp.jpg", price: 70000, id: 4 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880105/Missplanet%20Collectibles/accessories/accessories3_p3keuf.jpg", price: 45000, id: 2 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880105/Missplanet%20Collectibles/accessories/accessories4_rkgswo.jpg", price: 55000, id: 3 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880106/Missplanet%20Collectibles/accessories/accessories5_y7cjsc.jpg", price: 65000, id: 5 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880109/Missplanet%20Collectibles/accessories/accessories6_zaa93e.jpg", price: 90000, id: 6 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880109/Missplanet%20Collectibles/accessories/accessories7_ykhk7s.jpg", price: 70000, id: 7 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880110/Missplanet%20Collectibles/accessories/accessories8_by3pkk.jpg", price: 75000, id: 8 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880111/Missplanet%20Collectibles/accessories/accessories9_cebynd.jpg", price: 60000, id: 9 },
+    { name: "Bead Accessory", img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880112/Missplanet%20Collectibles/accessories/accessories10_thkacs.jpg", price: 45000, id: 10 },
+    
   ]; 
 
   return (

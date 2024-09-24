@@ -35,95 +35,101 @@ const Bridals = () => {
 
   const bridals = [
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883463/Missplanet%20Collectibles/bridal/bridal1_mm0ccs.jpg",
       price: 50000,
       id: 1,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883464/Missplanet%20Collectibles/bridal/bridal2_wodfcq.jpg",
       price: 80000,
       id: 2,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883464/Missplanet%20Collectibles/bridal/bridal3_xt9yhr.jpg",
       price: 79000,
       id: 3,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883466/Missplanet%20Collectibles/bridal/bridal4_etioyk.jpg",
       price: 50000,
       id: 4,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883468/Missplanet%20Collectibles/bridal/bridal5_ahtlra.jpg",
       price: 79000,
       id: 5,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883470/Missplanet%20Collectibles/bridal/bridal6_u18tnm.jpg",
       price: 79000,
       id: 6,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883472/Missplanet%20Collectibles/bridal/bridal7_cvwx8v.jpg",
       price: 65500,
       id: 7,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883474/Missplanet%20Collectibles/bridal/bridal8_kdy7qt.jpg",
       price: 39000,
       id: 8,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883475/Missplanet%20Collectibles/bridal/bridal9_eoaijn.jpg",
       price: 81000,
       id: 9,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883478/Missplanet%20Collectibles/bridal/bridal10_elbeqz.jpg",
       price: 45000,
       id: 10,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883480/Missplanet%20Collectibles/bridal/bridal11_fx0hvs.jpg",
       price: 60000,
       id: 11,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883482/Missplanet%20Collectibles/bridal/bridal12_wlbmar.jpg",
-      price: 55000,
+      price: 40000,
       id: 12,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883484/Missplanet%20Collectibles/bridal/bridal13_vk6oyz.jpg",
-      price: 83000,
+      price: 40000,
       id: 13,
     },
     {
-      name: "Traditional Bridal Attire",
+      name: "Traditional Bridal Accessory",
       img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722883513/Missplanet%20Collectibles/bridal/bridal14_cocjzn.jpg",
       price: 90000,
       id: 14,
+    },
+    {
+      name: "Weaved Bridal Hand Fan",
+      img: "https://res.cloudinary.com/dc-cloud/image/upload/v1722880113/Missplanet%20Collectibles/accessories/accessories11_q4p1d4.jpg",
+      price: 15000,
+      id: 15,
     },
   ];
 
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Bridals</h1>
-      <p>we offer only the best Traditional Bridal Attire</p>
+      <p>we offer only the best Traditional Bridal Accessory</p>
       <div className={styles.categoryContent}>
         <div className={styles.itemsInCategoryWrap}>
           {bridals.map((bridal) => (
