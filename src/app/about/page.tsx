@@ -9,7 +9,7 @@ const page = () => {
      const testimonials = [
        {
          quote:
-           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss planet for presenting me as the Queen I really am.",
+           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal coupled with the bridal accessories I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss planet for presenting me as the Queen I really am.",
          author: "Toyosi Andrew",
          avatar: "/img/blob.png",
        },
@@ -40,7 +40,7 @@ const page = () => {
           <div className={styles.aboutCard}>
             <div className={styles.ImgWrap}>
               <Image
-                src="/img/about.jpeg"
+                src="https://res.cloudinary.com/dc-cloud/image/upload/v1727272925/Missplanet%20Collectibles/two_african_ladies_exlgoy.webp"
                 width={200}
                 height={200}
                 alt=""
@@ -49,8 +49,13 @@ const page = () => {
             </div>
             <div>
               <p>
-                {`  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, animi. Quia laboriosam vel dignissimos explicabo non. Libero ab provident incidunt odio saepe rerum? Ex qui est, nihil optio suscipit placeat?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ut dolorum debitis, provident aliquid iusto est animi sint dolorem delectus laborum voluptate ipsa quibusdam harum repellendus eaque consequatur perferendis dolor?`}
+                {` At Miss Planet Concept, we are passionate about helping you express your unique style through our curated collection of wigs, accessories, bridal accessories, and fabrics. Whether you're preparing for a special event, enhancing your everyday look, or searching for the perfect fabric for your next project, our carefully selected products are designed to inspire confidence and elegance.`}
+              </p>
+              <h2>Our Story</h2>
+              <p>
+                {`
+                    Miss Planet Concept was founded with a vision to provide high-quality, stylish products that cater to the diverse needs of our customers. From luxurious wigs that transform your look, to elegant bridal accessories that complete your wedding day ensemble, we believe in celebrating beauty in all its forms.
+                  `}
               </p>
             </div>
           </div>
@@ -75,7 +80,7 @@ const page = () => {
             <h4>Unique and Custom Designs</h4>
             <p>
               {
-                "Our range of fabrics, accessories, and bridal attire features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."
+                "Our range of fabrics, accessories, and bridal accessories features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."
               }
             </p>
 

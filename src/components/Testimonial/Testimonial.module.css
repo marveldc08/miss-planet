@@ -124,8 +124,7 @@
     flex: 0 0 auto;
     scroll-snap-align: start;
     width: calc(100% / 1);
-    overflow: hidden;
-    padding: 20px 30px;
+    overflow: hidden;  
     /* height: 50rem; */
   }
 
