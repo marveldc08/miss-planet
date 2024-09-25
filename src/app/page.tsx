@@ -23,13 +23,13 @@ const Home = () => {
      const testimonials = [
        {
          quote:
-           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss Planet Collectables for presenting me as the Queen I really am.",
+           "Miss Planet, has really unvailed the beauty in me and put a lasting smile on the face of my dear Husband. My Traditional wedding was a bomb, as I showed up in my traditional bridal attire coupled with the bridal accessories I got from Miss Planet, the whole place was a stand still, they could not help but stare as I steped in with elegance and grace. Thank you Miss Planet Collectables for presenting me as the Queen I really am.",
          author: "Toyosi Andrew",
          avatar: "/img/blob.png",
        },
        {
          quote:
-           "  Miss Planet collectables is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet aer topnoch.",
+           "  Miss Planet collectables is my go-to for beauty, glamour and quality. I also appreciate how prices here are quite friendly and the quality of products ans services i get at Miss Planet are topnoch.",
          author: "Alice",
          avatar: "/img/blob.png",
        },
@@ -75,7 +75,7 @@ const Home = () => {
                   Your wedding day is a celebration of love, culture, and
                   heritage. Let us help you honor your roots and create
                   unforgettable memories with our stunning Nigerian traditional
-                  bridal attire. View our catalogue to find the perfect ensemble
+                  bridal accessory. View our catalogue to find the perfect ensemble
                   that resonates with your personal style and cultural
                   background. Step into your new life wrapped in grace and
                   elegance.
@@ -186,7 +186,7 @@ const Home = () => {
               <h4>Unique and Custom Designs</h4>
               <p>
                 {
-                  "Our range of fabrics, accessories, and bridal attire features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."
+                  "Our range of fabrics, accessories, and bridal accessories features unique designs that you won't find anywhere else. Whether you're looking for a traditional piece or something with a modern twist, our products are designed to stand out. We also offer custom design services to help you create the perfect outfit or accessory that truly reflects your individual style and vision."
                 }
               </p>
 
